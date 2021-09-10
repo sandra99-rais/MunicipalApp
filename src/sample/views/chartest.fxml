@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="722.0" prefWidth="1179.0" style="-fx-background-color: #1C2833;" stylesheets="@../../stylesheetmat/styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controlleur.chartest">
+   <children>
+      <BarChart fx:id="chart" layoutX="142.0" layoutY="109.0" prefHeight="242.0" prefWidth="1068.0">
+        <xAxis>
+          <CategoryAxis fx:id="dateaxis" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="numberaxis" side="LEFT" />
+        </yAxis>
+      </BarChart>
+      <BarChart fx:id="chartmonth" layoutX="145.0" layoutY="416.0" prefHeight="260.0" prefWidth="1068.0">
+         <xAxis>
+            <CategoryAxis fx:id="dateaxis1" side="BOTTOM" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis fx:id="numberaxis1" side="LEFT" />
+         </yAxis>
+      </BarChart>
+      <TextField fx:id="year" layoutX="890.0" layoutY="80.0" promptText="Saisissez une année" />
+      <TextField fx:id="monthc" layoutX="890.0" layoutY="378.0" promptText="Saisir le mois" />
+      <Label layoutX="770.0" layoutY="83.0" prefHeight="20.0" prefWidth="75.0" style="-fx-text-fill: white;" text="Année">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <Label layoutX="464.0" layoutY="380.0" prefHeight="27.0" prefWidth="64.0" style="-fx-text-fill: white;" text="Année">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <TextField fx:id="year1" layoutX="565.0" layoutY="378.0" promptText="Saisir l'année" />
+      <Label layoutX="793.0" layoutY="380.0" prefHeight="27.0" prefWidth="76.0" style="-fx-text-fill: white;" text="Mois">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <Button fx:id="yearshow" layoutX="1118.0" layoutY="78.0" mnemonicParsing="false" onAction="#yearchart" style="-fx-background-color: #DAF7A6;" text="Afficher">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.8495145631067961" startX="0.8495145631067961" startY="0.5922330097087378">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill></Button>
+      <Button fx:id="monthshow" layoutX="1118.0" layoutY="378.0" mnemonicParsing="false" onAction="#monthchart" style="-fx-background-color: #DAF7A6;" text="Afficher">
+         <textFill>
+            <LinearGradient endX="0.8495145631067961" endY="1.0" startX="0.8106796116504854" startY="0.7233009708737864">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <Button fx:id="cancelbutton" layoutX="1095.0" layoutY="676.0" mnemonicParsing="false" onAction="#CancelButtonOnAction" prefHeight="31.0" prefWidth="213.0" style="-fx-background-color: #9999ff;" text="Retour">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <Label layoutX="580.0" layoutY="634.0" prefHeight="30.0" prefWidth="52.0" text="Gain" textFill="#fcf8f8">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="580.0" layoutY="309.0" prefHeight="30.0" prefWidth="52.0" text="Gain" textFill="#fcf8f8">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="728.0" layoutY="309.0" prefHeight="30.0" prefWidth="85.0" text="Dépense" textFill="#fcf8f8">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="728.0" layoutY="634.0" prefHeight="30.0" prefWidth="85.0" text="Dépense" textFill="#fcf8f8">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <AnchorPane prefHeight="54.0" prefWidth="1352.0" style="-fx-background-color: #000d1a;">
+         <children>
+            <ImageView fitHeight="22.0" fitWidth="31.0" layoutX="1219.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../New/minimize_window_48px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="22.0" fitWidth="31.0" layoutX="1289.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../New/close_window_48px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="22.0" fitWidth="31.0" layoutX="1256.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../New/maximize_window_50px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="47.0" fitWidth="39.0" layoutX="23.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../New/langfr-800px-Coat_of_arms_of_Tunisia.svg.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="63.0" layoutY="14.0" prefHeight="21.0" prefWidth="120.0" text="Municipalité">
+               <font>
+                  <Font name="Calibri Bold Italic" size="20.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="0.23300970873786409" endY="1.0">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

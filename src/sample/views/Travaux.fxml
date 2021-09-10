@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="anchorpane1" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controlleur.ControllerTravauxx">
+   <center>
+      <ScrollPane prefHeight="868.0" prefWidth="1336.0">
+         <content>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="866.0" prefWidth="1318.0">
+            	<children>
+            
+            		<AnchorPane fx:id="anchor31" layoutX="-1.0" layoutY="49.0" prefHeight="818.0" prefWidth="1393.0" style="-fx-background-color: #1C2833;">
+            			<children>
+            				<TextField fx:id="cinfield" layoutX="380.0" layoutY="150.0" prefHeight="5.0" prefWidth="187.0" promptText="Cin de chef " />
+            				<TextField fx:id="cheffield" layoutX="380.0" layoutY="200.0" prefHeight="5.0" prefWidth="187.0" promptText="Nom de chef " />
+            				<TextField fx:id="budgetfield" layoutX="380.0" layoutY="565.0" prefHeight="5.0" prefWidth="187.0" promptText="Budget" />
+            				<TextField fx:id="regionfield" layoutX="380.0" layoutY="305.0" prefHeight="5.0" prefWidth="187.0" promptText="Région" />
+            				<Button fx:id="ajouter" layoutX="1177.0" layoutY="666.0" mnemonicParsing="false" onAction="#AjoutTravaux" prefHeight="32.0" prefWidth="129.0" style="-fx-background-color: Green;" styleClass="Button" stylesheets="@../../Stylesheet/Travaux.css" text="Enregistrer" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+            				<Button fx:id="modifier" layoutX="1177.0" layoutY="719.0" mnemonicParsing="false" onAction="#Edit" prefHeight="32.0" prefWidth="129.0" style="-fx-background-color: #515A5A;" styleClass="Button" stylesheets="@../../Stylesheet/Travaux.css" text="Modifier" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+            				<Button fx:id="retour" layoutX="1177.0" layoutY="766.0" mnemonicParsing="false" onAction="#RetourButton" prefHeight="32.0" prefWidth="129.0" style="-fx-background-color: #9999ff;" styleClass="Button" stylesheets="@../../Stylesheet/Travaux.css" text="Retour" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+            				<Button fx:id="consult" layoutX="547.0" layoutY="751.0" mnemonicParsing="false" onAction="#Loadsecondpagee" prefHeight="45.0" prefWidth="218.0" style="-fx-background-color: #DAF7A6; -fx-font-weight: Bold;" styleClass="consult" stylesheets="@../../Stylesheet/Travaux.css" text="Consulter les travaux">
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.529126213592233">
+                                 <stops>
+                                    <Stop color="BLACK" />
+                                    <Stop color="WHITE" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Button>
+            				<Label layoutX="103.0" layoutY="150.0" prefHeight="21.0" prefWidth="103.0" style="-fx-font-size: 18; -fx-font-family: calibri; -fx-font-weight: bold;" styleClass="b" text="CIN :" textFill="WHITE" />
+            				<Label layoutX="103.0" layoutY="200.0" prefHeight="35.0" prefWidth="103.0" style="-fx-font-size: 17; -fx-font-family: calibri; -fx-font-weight: bold;" text="Nom :" textFill="WHITE" />
+            				<Label layoutX="103.0" layoutY="250.0" prefHeight="21.0" prefWidth="142.0" style="-fx-font-size: 18; -fx-font-family: calibri; -fx-font-weight: bold;" text="Type des travaux :" textFill="WHITE" />
+            				<Label layoutX="103.0" layoutY="300.0" prefHeight="45.0" prefWidth="150.0" style="-fx-font-size: 18; -fx-font-weight: bold; -fx-font-family: calibri;" text="Région des travaux:" textFill="WHITE" />
+            				<Label layoutX="103.0" layoutY="360.0" prefHeight="21.0" prefWidth="111.0" style="-fx-font-size: 18; -fx-font-family: calibri; -fx-font-weight: bold;" text="Date :" textFill="WHITE" />
+            				<DatePicker fx:id="datepicker" layoutX="380.0" layoutY="356.0" prefHeight="5.0" prefWidth="187.0" />
+            				<Label layoutX="103.0" layoutY="476.0" prefHeight="21.0" prefWidth="161.0" style="-fx-font-family: calibri; -fx-font-size: 18; -fx-font-weight: bold;" text="Les besoins:" textFill="WHITE" />
+            				<Label layoutX="270.0" layoutY="360.0" prefHeight="21.0" prefWidth="34.0" style="-fx-font-size: 18; -fx-font-family: calibri; -fx-font-weight: bold;" text="Du" textFill="WHITE" />
+            				<Label layoutX="640.0" layoutY="360.0" prefHeight="23.0" prefWidth="30.0" style="-fx-font-size: 20; -fx-font-family: calibri; -fx-font-weight: bold;" text="à " textFill="WHITE" />
+            				<Label layoutX="103.0" layoutY="560.0" prefHeight="35.0" prefWidth="111.0" style="-fx-font-size: 18; -fx-font-family: calibri; -fx-font-weight: bold;" text="Budget :" textFill="WHITE" />
+            				<TextField fx:id="debutdatefield" layoutX="380.0" layoutY="409.0" prefHeight="26.0" prefWidth="187.0" promptText="Saisir l'heure" />
+            				<ComboBox fx:id="choiceboxbesoin1" layoutX="380.0" layoutY="471.0" prefHeight="32.0" prefWidth="250.0" promptText="Vos besoins materiaux?" />
+            				<TableView fx:id="table" layoutX="1207.0" layoutY="97.0" onMouseClicked="#getselected" prefHeight="339.0" prefWidth="68.0">
+            					<columns>
+            						<TableColumn fx:id="c1id" prefWidth="65.60003662109375" style="backgrounf-color: #ffff;" text="ID" />
+            					</columns>
+                           <stylesheets>
+                              <URL value="@../../Stylesheet/Travaux.css" />
+                              <URL value="@../../stylesheetmat/styles.css" />
+                           </stylesheets>
+            				</TableView>
+            				<DatePicker fx:id="datepicker1" layoutX="707.0" layoutY="356.0" prefHeight="5.0" prefWidth="187.0" />
+            				<TextField fx:id="findatefield" layoutX="707.0" layoutY="409.0" prefHeight="26.0" prefWidth="187.0" promptText="Saisir l'heure" />
+            				<Label layoutX="615.0" layoutY="414.0" prefHeight="22.0" prefWidth="75.0" style="-fx-font-size: 18; -fx-font-family: calibri; -fx-font-weight: bold;" text="jusqu'au" textFill="WHITE" />
+            				<ComboBox fx:id="typebox" layoutX="380.0" layoutY="250.0" prefWidth="187.0" promptText="Quel type?" />
+            				<ComboBox fx:id="choiceboxbesoin21" layoutX="380.0" layoutY="515.0" prefHeight="32.0" prefWidth="300.0" promptText="De quel vehicule avez vous besoin?" />
+            				<ImageView fx:id="travaux" fitHeight="45.0" fitWidth="34.0" layoutX="696.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true">
+            					<image>
+            						<Image url="@../New/construction_80px.png" />
+            					</image>
+            				</ImageView>
+                        <Label layoutX="600.0" layoutY="15.0" prefHeight="73.0" prefWidth="310.0" style="-fx-text-fill: white;" text="Gestion des travaux" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="26.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="20.0" fitWidth="40.0" layoutX="54.0" layoutY="155.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../New/fingerprint_32px.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="20.0" fitWidth="40.0" layoutX="54.0" layoutY="206.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../New/new_document_32px.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="20.0" fitWidth="40.0" layoutX="54.0" layoutY="250.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../New/type_32px.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="20.0" fitWidth="40.0" layoutX="54.0" layoutY="313.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../New/google_maps_old_32px.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="20.0" fitWidth="40.0" layoutX="54.0" layoutY="361.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../New/event_26px.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="20.0" fitWidth="40.0" layoutX="54.0" layoutY="477.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../New/maintenance_26px.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="20.0" fitWidth="40.0" layoutX="54.0" layoutY="568.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../New/euro_money_50px.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="20.0" fitWidth="40.0" layoutX="54.0" layoutY="511.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../New/truck_50px.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="21.0" fitWidth="31.0" layoutX="642.0" layoutY="725.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../New/tick_box_50px.png" />
+                           </image>
+                        </ImageView>
+                        <TextArea fx:id="description" layoutX="380.0" layoutY="598.0" prefHeight="117.0" prefWidth="312.0" />
+                        <Label layoutX="99.0" layoutY="598.0" prefHeight="35.0" prefWidth="111.0" style="-fx-font-size: 18; -fx-font-family: calibri; -fx-font-weight: bold;" text="Description :" textFill="WHITE" />
+            			</children>
+            			<cursor>
+            				<Cursor fx:constant="DEFAULT" />
+            			</cursor>
+            		</AnchorPane>
+                  <AnchorPane layoutX="-3.0" prefHeight="49.0" prefWidth="1395.0" style="-fx-background-color: #000d1a;">
+                     <children>
+                        <ImageView fitHeight="22.0" fitWidth="31.0" layoutX="1219.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../New/minimize_window_48px.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="22.0" fitWidth="31.0" layoutX="1289.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../New/close_window_48px.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="22.0" fitWidth="31.0" layoutX="1256.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../New/maximize_window_50px.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="47.0" fitWidth="39.0" layoutX="23.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../New/langfr-800px-Coat_of_arms_of_Tunisia.svg.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="63.0" layoutY="14.0" prefHeight="21.0" prefWidth="120.0" text="Municipalité">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="20.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="0.23300970873786409" endY="1.0">
+                                 <stops>
+                                    <Stop color="BLACK" />
+                                    <Stop color="WHITE" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            	</children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </center>
+</BorderPane>

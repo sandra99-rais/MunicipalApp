@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane prefHeight="856.0" prefWidth="1329.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controlleur.demandescontrolleur">
+   <content>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="854.0" prefWidth="1348.0" style="-fx-background-color: #1C2833;">
+      	<children>
+      		<Pane layoutY="139.0" prefHeight="717.0" prefWidth="583.0" style="-fx-background-color: #1C2833;">
+      			<children>
+      				<Label layoutX="70.0" layoutY="100.0" prefHeight="32.0" prefWidth="137.0" style="-fx-text-fill: white;" text="N° CIN :">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+      				<Label layoutX="70.0" layoutY="250.0" prefHeight="49.0" prefWidth="137.0" style="-fx-text-fill: white;" text="Lieu :">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+      				<Label layoutX="70.0" layoutY="300.0" prefHeight="26.0" prefWidth="137.0" style="-fx-text-fill: white;" text="Demande :">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+      				<Label layoutX="70.0" layoutY="150.0" prefHeight="30.0" prefWidth="178.0" style="-fx-text-fill: white;" text="N° de téléphone :">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+      				<TextField fx:id="cin" layoutX="355.0" layoutY="100.0" prefHeight="5.0" prefWidth="187.0" promptText="Num Cin" />
+      				<TextField fx:id="demande" accessibleRole="TEXT_AREA" layoutX="70.0" layoutY="359.0" prefHeight="68.0" prefWidth="464.0" promptText="Saisir une demande" />
+      				<TextField fx:id="telephone" layoutX="355.0" layoutY="150.0" promptText="Saisir un  num" />
+      				<TextField fx:id="lieu" layoutX="355.0" layoutY="250.0" prefHeight="5.0" prefWidth="187.0" promptText="Saisir le lieu " />
+      				<DatePicker fx:id="datedemande" layoutX="355.0" layoutY="200.0" prefHeight="5.0" prefWidth="187.0" />
+      				<Label layoutX="70.0" layoutY="200.0" prefHeight="26.0" prefWidth="166.0" style="-fx-text-fill: white;" text="Date :">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+      				<Button layoutX="40.0" layoutY="515.0" mnemonicParsing="false" onAction="#Accepter" prefHeight="30.0" prefWidth="190.0" style="-fx-background-color: green;" styleClass="accepter" stylesheets="@../../Stylesheet/styles2.css" text="Accepter la demande" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+      				<Button layoutX="411.0" layoutY="515.0" mnemonicParsing="false" onAction="#adddemande" prefHeight="30.0" prefWidth="105.0" style="-fx-background-color: green;" styleClass="ajouter" stylesheets="@../../Stylesheet/styles2.css" text="Ajouter" textFill="#fcfcfc">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+      				<Button layoutX="40.0" layoutY="580.0" mnemonicParsing="false" onAction="#Refuser" prefHeight="30.0" prefWidth="190.0" style="-fx-background-color: red;" styleClass="refuser" stylesheets="@../../Stylesheet/styles2.css" text="Refuser la demande" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+      				<Button layoutX="410.0" layoutY="613.0" mnemonicParsing="false" onAction="#Delete" prefHeight="30.0" prefWidth="105.0" style="-fx-background-color: red;" styleClass="supp" stylesheets="@../../Stylesheet/styles2.css" text="Supprimer" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+      				<Button layoutX="410.0" layoutY="565.0" mnemonicParsing="false" onAction="#modif" prefHeight="30.0" prefWidth="105.0" style="-fx-background-color: #515A5A;" styleClass="modifier" stylesheets="@../../Stylesheet/styles2.css" text="Modifier" textFill="#fcfcfc">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+      				<Button fx:id="RETOUR" layoutX="410.0" layoutY="669.0" mnemonicParsing="false" onAction="#retour" prefHeight="30.0" prefWidth="105.0" style="-fx-background-color: #9999ff;" styleClass="Retour" stylesheets="@../../Stylesheet/styles2.css" text="Retour">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+      				<ImageView fx:id="retourimage" fitHeight="26.0" fitWidth="26.0" layoutX="361.0" layoutY="714.0" pickOnBounds="true" preserveRatio="true">
+      					<image>
+      						<Image url="@../images/return.png" />
+      					</image>
+      				</ImageView>
+            				<ImageView fx:id="cinimage" fitHeight="20.0" fitWidth="40.0" layoutX="20.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true">
+            					<image>
+            						<Image url="@../New/fingerprint_32px.png" />
+            					</image>
+            				</ImageView>
+            				<ImageView fx:id="demandeimage" fitHeight="20.0" fitWidth="40.0" layoutX="20.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+            					<image>
+            						<Image url="@../New/type_32px.png" />
+            					</image>
+            				</ImageView>
+            				<ImageView fx:id="numimage" fitHeight="20.0" fitWidth="40.0" layoutX="20.0" layoutY="155.0" pickOnBounds="true" preserveRatio="true">
+            					<image>
+            						<Image url="@../New/phone_50px.png" />
+            					</image>
+            				</ImageView>
+            				<ImageView fx:id="dateimage" fitHeight="20.0" fitWidth="40.0" layoutX="20.0" layoutY="205.0" pickOnBounds="true" preserveRatio="true">
+            					<image>
+            						<Image url="@../New/event_26px.png" />
+            					</image>
+            				</ImageView>
+            				<ImageView fx:id="lieuimage" fitHeight="20.0" fitWidth="40.0" layoutX="20.0" layoutY="265.0" pickOnBounds="true" preserveRatio="true">
+            					<image>
+            						<Image url="@../New/place_marker_32px.png" />
+            					</image>
+            				</ImageView>
+                  <ComboBox fx:id="typedemande" layoutX="355.0" layoutY="50.0" prefHeight="5.0" prefWidth="187.0" promptText="Type" />
+                  <Label layoutX="70.0" layoutY="50.0" prefHeight="32.0" prefWidth="197.0" style="-fx-text-fill: white;" text="Type de la demande :">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="lieuimage1" fitHeight="20.0" fitWidth="40.0" layoutX="20.0" layoutY="304.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../New/create_32px.png" />
+                     </image>
+                  </ImageView>
+      			</children>
+      		</Pane>
+      		<Pane layoutX="-20.0" layoutY="52.0" prefHeight="94.0" prefWidth="1334.0" style="-fx-background-color: #1C2833;">
+      			<children>
+      				<TextField fx:id="filteredField" layoutX="1133.0" layoutY="32.0" promptText="Recherche" />
+            				<Label alignment="CENTER" layoutX="88.0" layoutY="24.0" prefHeight="49.0" prefWidth="274.0" text="Gestion des demandes " textAlignment="CENTER" textFill="#f2eded" textOverrun="WORD_ELLIPSIS">
+            					<font>
+            						<Font name="Calibri Bold" size="28.0" />
+            					</font>
+            				</Label>
+      				<ImageView fx:id="rechercheimage" fitHeight="20.0" fitWidth="30.0" layoutX="1103.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+      					<image>
+      						<Image url="@../New/search_26px.png" />
+      					</image>
+      				</ImageView>
+            				<ImageView fx:id="image" fitHeight="39.0" fitWidth="43.0" layoutX="36.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" styleClass="image">
+            					<image>
+            						<Image url="@../New/group_task_32px.png" />
+            					</image>
+            				</ImageView>
+      			</children>
+      		</Pane>
+      		<TableView fx:id="table" layoutX="580.0" layoutY="140.0" onMouseClicked="#getSelected" prefHeight="717.0" prefWidth="735.0" styleClass="tableview">
+      			<columns>
+                  <TableColumn fx:id="tableid" prefWidth="43.0" text="ID" />
+      				<TableColumn fx:id="tabletelephone" minWidth="8.00006103515625" prefWidth="99.0" text="NumTel" />
+      				<TableColumn fx:id="tabledate" prefWidth="95.0" text="Date" />
+      				<TableColumn fx:id="tablelieu" minWidth="1.0" prefWidth="85.0" text="Lieu" />
+      				<TableColumn fx:id="typetable" prefWidth="85.0" text="type" />
+                  <TableColumn fx:id="tabledecision" prefWidth="111.0" text="Décision" />
+      				<TableColumn fx:id="tablecin" prefWidth="89.0" text="Num_Cin" />
+      				<TableColumn fx:id="tabledemande" prefWidth="128.0" text="Demande" />
+      			</columns>
+               <stylesheets>
+                  <URL value="@../../Stylesheet/styles2.css" />
+                  <URL value="@../../stylesheetmat/styles.css" />
+               </stylesheets>
+      		</TableView>
+            <AnchorPane prefHeight="57.0" prefWidth="1384.0" style="-fx-background-color: #000d1a;">
+               <children>
+                  <ImageView fitHeight="22.0" fitWidth="31.0" layoutX="1219.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../New/minimize_window_48px.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="22.0" fitWidth="31.0" layoutX="1289.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../New/close_window_48px.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="22.0" fitWidth="31.0" layoutX="1256.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../New/maximize_window_50px.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="47.0" fitWidth="39.0" layoutX="14.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../New/langfr-800px-Coat_of_arms_of_Tunisia.svg.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="63.0" layoutY="14.0" prefHeight="21.0" prefWidth="120.0" text="Municipalité">
+                     <font>
+                        <Font name="Calibri Bold Italic" size="20.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="0.23300970873786409" endY="1.0">
+                           <stops>
+                              <Stop color="BLACK" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+               </children>
+            </AnchorPane>
+      	</children>
+      </AnchorPane>
+   </content>
+</ScrollPane>

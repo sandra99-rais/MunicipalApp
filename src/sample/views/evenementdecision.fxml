@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane prefHeight="686.0" prefWidth="1361.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controlleur.evenementdecisioncontrolleur">
+   <content>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="756.0" prefWidth="1376.0" style="-fx-background-color: #1C2833;">
+         <children>
+            <TableView fx:id="table" layoutY="159.0" onMouseClicked="#getselected" prefHeight="402.0" prefWidth="1333.0" stylesheets="@../../stylesheetmat/styles.css">
+              <columns>
+                <TableColumn fx:id="id" prefWidth="45.0" text="ID" />
+                <TableColumn fx:id="nom" prefWidth="68.0" text="Nom" />
+                  <TableColumn fx:id="type" prefWidth="62.0" text="Type" />
+                  <TableColumn fx:id="organiseur" prefWidth="100.0" text="Organiseur" />
+                  <TableColumn fx:id="lieu" prefWidth="68.0" text="Lieu" />
+                  <TableColumn fx:id="adresse" prefWidth="86.0" text="Adresse" />
+                  <TableColumn fx:id="lieurendezvous" prefWidth="98.0" text="Lieu RDV" />
+                  <TableColumn fx:id="heurerendezvous" prefWidth="75.0" text="Heure RDV" />
+                  <TableColumn fx:id="nombrespersonne" prefWidth="75.0" text="nombres des personne" />
+                  <TableColumn fx:id="datedebut" prefWidth="131.0" text="Date début" />
+                  <TableColumn fx:id="heuredebut" prefWidth="105.0" text="Heure début" />
+                  <TableColumn fx:id="datefin" prefWidth="92.0" text="Date fin" />
+                  <TableColumn fx:id="heurefin" prefWidth="81.0" text="Heure fin" />
+                  <TableColumn fx:id="telephone" prefWidth="85.0" text="Téléphone" />
+                  <TableColumn fx:id="mail" prefWidth="62.0" text="Mail" />
+                  <TableColumn fx:id="decision" prefWidth="99.0" text="Décision" />
+              </columns>
+            </TableView>
+            <Button fx:id="accepter" layoutX="424.0" layoutY="610.0" mnemonicParsing="false" onAction="#Accepter" prefHeight="37.0" prefWidth="129.0" style="-fx-background-color: green;" text="Accepter" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Button>
+            <Button fx:id="refuser" layoutX="593.0" layoutY="610.0" mnemonicParsing="false" onAction="#Refuser" prefHeight="25.0" prefWidth="129.0" style="-fx-background-color: red;" text="Refuser" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Button>
+            <Button fx:id="RETOUR" layoutX="1161.0" layoutY="620.0" mnemonicParsing="false" onAction="#retour" prefHeight="38.0" prefWidth="129.0" style="-fx-background-color: #9999ff;" text="Retour" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Button>
+            <TextField fx:id="FilteredField" layoutX="1113.0" layoutY="93.0" promptText="Rechercher" />
+            <Button fx:id="refuser1" layoutX="759.0" layoutY="610.0" mnemonicParsing="false" onAction="#Delete" prefHeight="38.0" prefWidth="129.0" style="-fx-background-color: B02A2A;" text="Supprimer" textFill="#fcfcfc">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="21.0" fitWidth="31.0" layoutX="1065.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../New/search_26px.png" />
+               </image>
+            </ImageView>
+            <AnchorPane prefHeight="49.0" prefWidth="1390.0" style="-fx-background-color: #000d1a;">
+               <children>
+                  <ImageView fitHeight="22.0" fitWidth="31.0" layoutX="1219.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../New/minimize_window_48px.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="22.0" fitWidth="31.0" layoutX="1289.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../New/close_window_48px.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="22.0" fitWidth="31.0" layoutX="1256.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../New/maximize_window_50px.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="47.0" fitWidth="39.0" layoutX="23.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../New/langfr-800px-Coat_of_arms_of_Tunisia.svg.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="63.0" layoutY="14.0" prefHeight="21.0" prefWidth="120.0" text="Municipalité">
+                     <font>
+                        <Font name="Calibri Bold Italic" size="20.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="0.23300970873786409" endY="1.0">
+                           <stops>
+                              <Stop color="BLACK" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <Label layoutX="410.0" layoutY="62.0" prefHeight="73.0" prefWidth="429.0" style="-fx-text-fill: white;" text="Décision concernant l'événement" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="21.0" fitWidth="31.0" layoutX="647.0" layoutY="579.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../New/close_window_24px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="21.0" fitWidth="31.0" layoutX="803.0" layoutY="578.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../New/multiply_26px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="21.0" fitWidth="31.0" layoutX="478.0" layoutY="578.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../New/tick_box_50px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="21.0" fitWidth="31.0" layoutX="1215.0" layoutY="589.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../New/return_24px.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>

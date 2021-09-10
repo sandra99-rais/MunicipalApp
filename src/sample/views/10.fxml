@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="694.0" prefWidth="1198.0" style="-fx-background-color: #001121;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controlleur.Accueilcontrolleur">
+   <children>
+      <AnchorPane prefHeight="50.0" prefWidth="1431.0" style="-fx-background-color: #000d1a;">
+         <children>
+            <ImageView fx:id="Menu" fitHeight="28.0" fitWidth="39.0" layoutX="19.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/list_26px.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="MenuClose" fitHeight="28.0" fitWidth="39.0" layoutX="19.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/list_26px.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="exit" layoutX="1164.0" layoutY="4.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="45.0" prefWidth="158.0" style="-fx-background-color: #000d1a; -fx-text-fill: #e0e0d1;" text="Déconnexion X">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="47.0" prefHeight="750.0" prefWidth="73.0" style="-fx-background-color: #000d1a;">
+         <children>
+            <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="24.0" layoutY="559.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/search_26px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="24.0" layoutY="503.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/combo_chart_26px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="24.0" layoutY="458.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/rent_26px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="24.0" layoutY="408.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/construction_24px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="24.0" layoutY="365.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/ticket_purchase_26px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="24.0" layoutY="313.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/conference_26px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="24.0" layoutY="269.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/public_transportation_26px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="36.0" fitWidth="26.0" layoutX="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/structural_26px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="24.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/account_26px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="24.0" layoutY="91.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/businessman_26px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="24.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/management_32px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="24.0" layoutY="184.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/event_26px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="24.0" layoutY="224.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/services_26px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="25.0" layoutY="613.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/help_32px.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="slider" layoutX="73.0" layoutY="47.0" prefHeight="750.0" prefWidth="357.0" style="-fx-background-color: #000d1a;">
+         <children>
+            <VBox prefHeight="639.0" prefWidth="357.0" style="-fx-background-color: #000d1a;">
+               <children>
+                  <Button maxWidth="395.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="357.0" style="-fx-background-color: transparent; -fx-font-family: calibri; -fx-font-weight: bold; -fx-font-size: 20; -fx-border-color: eed153;" text="Accueil" textFill="WHITE" />
+                  <Button layoutX="10.0" layoutY="10.0" maxWidth="395.0" mnemonicParsing="false" onAction="#gestioncomptes" prefHeight="56.0" style="-fx-background-color: transparent; -fx-font-family: calibri; -fx-font-weight: bold; -fx-font-size: 20; -fx-border-color: eed153;" text="Gestion des citoyen" textFill="WHITE" />
+                  <Button layoutX="10.0" layoutY="66.0" maxWidth="395.0" mnemonicParsing="false" onAction="#tableconsulter" prefHeight="56.0" style="-fx-background-color: transparent; -fx-font-family: calibri; -fx-font-weight: bold; -fx-font-size: 20; -fx-border-color: eed153;" text="Gestion des personnels" textFill="WHITE" />
+                  <Button layoutX="10.0" layoutY="122.0" maxWidth="395.0" mnemonicParsing="false" onAction="#teams" prefHeight="56.0" style="-fx-background-color: transparent; -fx-font-family: calibri; -fx-font-weight: bold; -fx-font-size: 20; -fx-border-color: eed153;" text="Gestion des équipes" textFill="WHITE" />
+                  <Button layoutX="10.0" layoutY="178.0" maxWidth="395.0" mnemonicParsing="false" onAction="#evenement" prefHeight="56.0" style="-fx-background-color: transparent; -fx-font-family: calibri; -fx-font-weight: bold; -fx-font-size: 20; -fx-border-color: eed153;" text="Gestion des événements" textFill="WHITE" />
+                  <Button layoutX="10.0" layoutY="234.0" maxWidth="395.0" mnemonicParsing="false" onAction="#materiel" prefHeight="56.0" style="-fx-background-color: transparent; -fx-font-family: calibri; -fx-font-weight: bold; -fx-font-size: 20; -fx-border-color: eed153;" text="Gestion des matériels" textFill="WHITE" />
+                  <Button layoutX="10.0" layoutY="290.0" maxWidth="395.0" mnemonicParsing="false" onAction="#vehicule" prefHeight="56.0" style="-fx-background-color: transparent; -fx-font-family: calibri; -fx-font-weight: bold; -fx-font-size: 20; -fx-border-color: eed153;" text="Gestion des véhicules" textFill="WHITE" />
+                  <Button layoutX="10.0" layoutY="346.0" maxWidth="395.0" mnemonicParsing="false" onAction="#demande" prefHeight="62.0" prefWidth="322.0" style="-fx-background-color: transparent; -fx-font-family: calibri; -fx-font-weight: bold; -fx-font-size: 17; -fx-border-color: eed153;" text="Gestion des doléances et demandes diverses" textFill="WHITE" />
+                  <Button layoutX="10.0" layoutY="402.0" maxWidth="395.0" mnemonicParsing="false" onAction="#evenementDecision" prefHeight="56.0" style="-fx-background-color: transparent; -fx-font-family: calibri; -fx-font-weight: bold; -fx-font-size: 18; -fx-border-color: eed153;" text="Gestion des permis et des autorisations" textFill="WHITE" />
+                  <Button layoutX="10.0" layoutY="458.0" maxWidth="395.0" mnemonicParsing="false" onAction="#travaux" prefHeight="56.0" style="-fx-background-color: transparent; -fx-font-family: calibri; -fx-font-weight: bold; -fx-font-size: 18; -fx-border-color: eed153;" text="Gestion de planification des interventions " textFill="WHITE" />
+                  <Button fx:id="revenue" layoutX="10.0" layoutY="514.0" maxWidth="395.0" mnemonicParsing="false" onAction="#recette" prefHeight="56.0" style="-fx-background-color: transparent; -fx-font-family: calibri; -fx-font-weight: bold; -fx-font-size: 18; -fx-border-color: eed153;" text="Gestion des dépenses et des revenus" textFill="WHITE" />
+                  <Button layoutX="10.0" layoutY="570.0" maxWidth="395.0" mnemonicParsing="false" onAction="#chart" prefHeight="66.0" prefWidth="322.0" style="-fx-background-color: transparent; -fx-font-family: calibri; -fx-font-weight: bold; -fx-font-size: 17; -fx-border-color: eed153;" text="Gestion du rapports finnanciers et d'activités" textFill="WHITE" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="355.6708984375" />
+                  <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="357.0" style="-fx-background-color: eed153; -fx-border-color: #000d1a;" text="Je recherche..." textFill="#000d1a">
+                     <font>
+                        <Font name="Calibri Bold Italic" size="16.0" />
+                     </font>
+                  </Button>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="356.6708984375" />
+                  <Button layoutX="10.0" layoutY="718.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="360.0" style="-fx-background-color: eed153; -fx-border-color: #000d1a;" text="Contacter nous." textFill="#000d1a">
+                     <font>
+                        <Font name="Calibri Bold Italic" size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="430.0" layoutY="47.0" prefHeight="750.0" prefWidth="1001.0" style="-fx-background-color: #001121;">
+         <children>
+            <VBox layoutX="442.0" layoutY="507.0" prefHeight="129.0" prefWidth="324.0" style="-fx-background-color: #000d1a;">
+               <children>
+                  <TextField prefWidth="324.0" promptText="N° de téléphone : 50 X48 478" style="-fx-background-color: transparent; -fx-border-color: eed153;">
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                  </TextField>
+                  <TextField layoutX="10.0" layoutY="10.0" promptText="Site internet : Municipal.com" style="-fx-background-color: transparent; -fx-border-color: eed153;">
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                  </TextField>
+                  <TextField layoutX="10.0" layoutY="43.0" promptText="Courriel :Municipal@gmail.com" style="-fx-background-color: transparent; -fx-border-color: eed153;">
+                     <font>
+                        <Font name="Calibri Bold Italic" size="16.0" />
+                     </font>
+                  </TextField>
+                  <TextField layoutX="10.0" layoutY="76.0" promptText="Adresse : 5 rue 9 avril " style="-fx-background-color: transparent; -fx-border-color: eed153;">
+                     <font>
+                        <Font name="Calibri Bold Italic" size="16.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </VBox>
+            <ImageView fitHeight="105.0" fitWidth="19.0" layoutX="413.0" layoutY="514.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/phone_50px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="19.0" layoutX="413.0" layoutY="615.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/google_maps_old_48px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="13.0" fitWidth="19.0" layoutX="416.0" layoutY="549.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/email_50px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="13.0" fitWidth="52.0" layoutX="416.0" layoutY="582.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/secured_letter_26px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="323.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/langfr-800px-Coat_of_arms_of_Tunisia.svg.png" />
+               </image>
+            </ImageView>
+            <Text fill="#ddc874" layoutX="153.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenue sur la platforme de la municipalité.">
+               <font>
+                  <Font name="Calibri Bold" size="24.0" />
+               </font>
+               <effect>
+                  <Reflection bottomOpacity="0.13" fraction="0.54" topOpacity="0.19" />
+               </effect>
+            </Text>
+            <ImageView fitHeight="242.0" fitWidth="409.0" layoutX="201.0" layoutY="213.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/tunis-170.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Accordion style="-fx-background-color: #001121;" />
+   </children>
+</AnchorPane>

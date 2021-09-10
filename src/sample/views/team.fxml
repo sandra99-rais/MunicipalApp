@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane prefHeight="868.0" prefWidth="1401.0" style="-fx-background-color: #1C2833;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controlleur.Controllerequip">
+   <content>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="866.0" prefWidth="1382.0" style="-fx-background-color: #1C2833;">
+         <left>
+            <AnchorPane prefHeight="814.0" prefWidth="729.0" style="-fx-background-color: #1C2833;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="num_cinlabel" layoutX="100.0" layoutY="170.0" prefHeight="27.0" prefWidth="249.0" text="N° de CIN du personnel :" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="num_cintextfield" layoutX="379.0" layoutY="170.0" promptText=" Num CIN1" />
+                  <Button fx:id="addbutton" layoutX="579.0" layoutY="659.0" mnemonicParsing="false" onAction="#Addpersonnel" prefHeight="31.0" prefWidth="129.0" style="-fx-background-color: green;" text="Ajouter " textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="cancelbutton" layoutX="579.0" layoutY="755.0" mnemonicParsing="false" onAction="#CancelButtonOnAction" prefHeight="31.0" prefWidth="129.0" style="-fx-background-color: #9999ff;" text="Retour" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="msgLabel" layoutX="38.0" layoutY="359.0" prefHeight="21.0" prefWidth="177.0" textFill="#e10e0e" />
+                  <TextField fx:id="num_cintextfield1" layoutX="379.0" layoutY="220.0" promptText=" Num CIN2" />
+                  <TextField fx:id="num_cintextfield11" layoutX="379.0" layoutY="270.0" promptText=" Num CIN3" />
+                  <TextField fx:id="num_cintextfield111" layoutX="379.0" layoutY="320.0" promptText=" Num CIN4" />
+                  <TextField fx:id="numequipe" layoutX="379.0" layoutY="509.0" promptText="N° de l'équipe" />
+                  <Label fx:id="numeqlabel" layoutX="100.0" layoutY="509.0" text="N° d'équipe :" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="tacheequipe" layoutX="100.0" layoutY="400.0" text="Tâche d'équipe : " textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tachetextfield1111" layoutX="379.0" layoutY="400.0" promptText="Tache de l'équipe" />
+                  <Button fx:id="delete" layoutX="579.0" layoutY="708.0" mnemonicParsing="false" onAction="#Delete" prefHeight="31.0" prefWidth="129.0" style="-fx-background-color: red;" text="Supprimer " textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="filteredField" layoutX="528.0" layoutY="64.0" promptText="recherche" />
+                  <Label layoutX="224.0" prefHeight="73.0" prefWidth="310.0" style="-fx-text-fill: white;" text="Gestion des équipes" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="26.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="20.0" fitWidth="40.0" layoutX="494.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../New/search_26px.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="20.0" fitWidth="40.0" layoutX="54.0" layoutY="176.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../New/identification_documents_80px.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="20.0" fitWidth="40.0" layoutX="54.0" layoutY="404.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../New/compose_50px.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="20.0" fitWidth="40.0" layoutX="54.0" layoutY="509.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../New/name_32px.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="20.0" fitWidth="40.0" layoutX="191.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../New/management_32px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </left>
+         <top>
+            <AnchorPane prefHeight="52.0" prefWidth="899.0" style="-fx-background-color: #1C2833;" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane layoutY="2.0" prefHeight="49.0" prefWidth="1372.0" style="-fx-background-color: #000d1a;">
+                     <children>
+                        <ImageView fitHeight="22.0" fitWidth="31.0" layoutX="1219.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../New/minimize_window_48px.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="22.0" fitWidth="31.0" layoutX="1289.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../New/close_window_48px.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="22.0" fitWidth="31.0" layoutX="1256.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../New/maximize_window_50px.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="47.0" fitWidth="39.0" layoutX="23.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../New/langfr-800px-Coat_of_arms_of_Tunisia.svg.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="63.0" layoutY="14.0" prefHeight="21.0" prefWidth="120.0" text="Municipalité">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="20.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="0.23300970873786409" endY="1.0">
+                                 <stops>
+                                    <Stop color="BLACK" />
+                                    <Stop color="WHITE" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </top>
+         <center>
+            <TableView fx:id="personneltable" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#getSelected" prefHeight="814.0" prefWidth="634.0" stylesheets="@../../stylesheetmat/styles.css" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn fx:id="numeq" prefWidth="109.0" text="NumEquipe" />
+                  <TableColumn fx:id="numcinp1" prefWidth="70.0" text="P1" />
+                  <TableColumn fx:id="numcinp2" prefWidth="109.0" text="P2" />
+                  <TableColumn fx:id="numcinp3" prefWidth="97.0" text="P3" />
+                  <TableColumn fx:id="numcinp4" prefWidth="113.0" text="P4" />
+                  <TableColumn fx:id="tacheeq" prefWidth="154.0" text="TacheEquipe" />
+              </columns>
+            </TableView>
+         </center>
+      </BorderPane>
+   </content>
+</ScrollPane>

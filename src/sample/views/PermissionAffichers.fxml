@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane prefHeight="868.0" prefWidth="1346.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controlleur.AfficherPermission">
+   <content>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="866.0" prefWidth="1362.0" style="-fx-background-color: #1C2833;">
+         <children>
+            <Label layoutX="470.0" layoutY="180.0" text="ID :" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="470.0" layoutY="230.0" text="Nom :" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="470.0" layoutY="280.0" text="Rubrique:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="470.0" layoutY="430.0" text="Gain :" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="470.0" layoutY="480.0" text="Dépense :" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="470.0" layoutY="530.0" text="Solde :" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="idl" layoutX="750.0" layoutY="180.0" prefHeight="32.0" prefWidth="289.0" text="Label" textFill="WHITE">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="noml" layoutX="750.0" layoutY="230.0" prefHeight="32.0" prefWidth="265.0" text="Label" textFill="WHITE">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="rubriquel" layoutX="750.0" layoutY="280.0" prefHeight="32.0" prefWidth="283.0" text="Label" textFill="WHITE">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="gainl" layoutX="750.0" layoutY="430.0" prefHeight="32.0" prefWidth="284.0" text="Label" textFill="WHITE">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="depensel" layoutX="750.0" layoutY="480.0" prefHeight="32.0" prefWidth="309.0" text="Label" textFill="WHITE">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="soldel" layoutX="750.0" layoutY="530.0" prefHeight="32.0" prefWidth="327.0" text="Label" textFill="WHITE">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="470.0" layoutY="330.0" prefHeight="32.0" prefWidth="190.0" text="Type d'opération" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="470.0" layoutY="380.0" text="Date :" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="typeop" layoutX="750.0" layoutY="330.0" prefHeight="32.0" prefWidth="278.0" text="Label" textFill="WHITE">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="datel" layoutX="750.0" layoutY="380.0" prefHeight="32.0" prefWidth="327.0" text="Label" textFill="WHITE">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Accordion />
+            <Button fx:id="cancel" layoutX="1143.0" layoutY="792.0" mnemonicParsing="false" onAction="#Retour" prefHeight="49.0" prefWidth="141.0" style="-fx-background-color: #9999ff; -fx-font-size: 18; -fx-font-weight: bold;" text="Retour" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <AnchorPane prefHeight="71.0" prefWidth="765.0" style="-fx-background-color: #1C2833;">
+               <children>
+                  <AnchorPane prefHeight="49.0" prefWidth="1362.0" style="-fx-background-color: #000d1a;">
+                     <children>
+                        <ImageView fitHeight="22.0" fitWidth="31.0" layoutX="1219.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../New/minimize_window_48px.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="22.0" fitWidth="31.0" layoutX="1289.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../New/close_window_48px.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="22.0" fitWidth="31.0" layoutX="1256.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../New/maximize_window_50px.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="47.0" fitWidth="39.0" layoutX="23.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../New/langfr-800px-Coat_of_arms_of_Tunisia.svg.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="63.0" layoutY="14.0" prefHeight="21.0" prefWidth="120.0" text="Municipalité">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="20.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="0.23300970873786409" endY="1.0">
+                                 <stops>
+                                    <Stop color="BLACK" />
+                                    <Stop color="WHITE" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <Label layoutX="1163.0" layoutY="54.0" prefHeight="73.0" prefWidth="129.0" style="-fx-text-fill: white;" text="Extrait" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold Italic" size="36.0" />
+               </font>
+            </Label>
+            <VBox layoutX="65.0" layoutY="722.0" prefHeight="129.0" prefWidth="324.0" style="-fx-background-color: #000d1a;">
+               <children>
+                  <TextField prefWidth="324.0" promptText="N° de téléphone : 50 X48 478" style="-fx-background-color: transparent; -fx-border-color: eed153;">
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                  </TextField>
+                  <TextField layoutX="10.0" layoutY="10.0" promptText="Site internet : Municipal.com" style="-fx-background-color: transparent; -fx-border-color: eed153;">
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                  </TextField>
+                  <TextField layoutX="10.0" layoutY="43.0" promptText="Courriel :Municipal@gmail.com" style="-fx-background-color: transparent; -fx-border-color: eed153;">
+                     <font>
+                        <Font name="Calibri Bold Italic" size="16.0" />
+                     </font>
+                  </TextField>
+                  <TextField layoutX="10.0" layoutY="76.0" promptText="Adresse : 5 rue 9 avril " style="-fx-background-color: transparent; -fx-border-color: eed153;">
+                     <font>
+                        <Font name="Calibri Bold Italic" size="16.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </VBox>
+            <ImageView fitHeight="105.0" fitWidth="19.0" layoutX="28.0" layoutY="722.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/phone_50px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="13.0" fitWidth="19.0" layoutX="31.0" layoutY="768.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/email_50px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="13.0" fitWidth="52.0" layoutX="31.0" layoutY="804.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/secured_letter_26px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="19.0" layoutX="28.0" layoutY="832.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/google_maps_old_48px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="19.0" fitWidth="19.0" layoutX="1204.0" layoutY="765.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../New/return_24px.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>

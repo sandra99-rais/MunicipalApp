@@ -1,0 +1,59 @@
+
+
+
+
+
+
+
+/*.button{
+    -fx-background-radius: 15;
+    -fx-border : none;
+    -fx-padding: 5px 9px ;*/
+
+
+.button2:hover
+{
+    -fx-background-radius :  15;
+}
+.button2:pressed
+{
+
+    -fx-background-radius :  15;
+}
+.button1:hover
+{
+    -fx-background-radius :  15;
+}
+.button1:pressed
+{
+
+    -fx-background-radius :  15;
+}
+button3:hover
+{
+    -fx-background-radius :  15;
+}
+.button3:pressed
+{
+
+    -fx-background-radius :  15;
+}
+.table-view {
+    -fx-background-color: #979A9A;
+}
+.table-view .column-header-background{
+    -fx-background-color: linear-gradient(to bottom, #fff,  #1C2833);
+    -fx-background-radius: 4px 4px 0px 0px;
+    -fx-background-insets: 0 7px 0 0;
+    -fx-padding: 0 0 4px 0;
+}
+
+
+
+
+
+
+
+
+
+

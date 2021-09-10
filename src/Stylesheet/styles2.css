@@ -1,0 +1,36 @@
+.ajouter:hover
+{
+    -fx-background-radius :  15;
+}
+.modifier:hover
+{
+
+    -fx-background-radius :  15;
+}
+.supp:hover
+{
+    -fx-background-radius :  15;
+}
+.accepter:hover
+{
+
+    -fx-background-radius :  15;
+}
+.refuser:hover
+{
+    -fx-background-radius :  15;
+}
+.retour:hover
+{
+
+    -fx-background-radius :  15;
+}
+.tableview {
+    -fx-background-color: #979A9A;
+}
+.tableview.column-header-background{
+
+    -fx-background-radius: 7px 7px 0px 0px;
+    -fx-background-insets: 0 9px 0 0;
+    -fx-padding: 0 0 7px 0;
+}

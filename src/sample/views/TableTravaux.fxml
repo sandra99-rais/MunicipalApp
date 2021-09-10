@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controlleur.ControllerTabletravaux">
+   <center>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="866.0" prefWidth="1387.0" style="-fx-background-color: #1C2833;">
+      	<children>
+      		<TableView fx:id="table" layoutX="-3.0" layoutY="129.0" onMouseClicked="#getselected" prefHeight="522.0" prefWidth="1302.0" style="-fx-background-color: grey;" styleClass="tableview">
+      			<columns>
+      				<TableColumn fx:id="cinfield" prefWidth="122.0" text="N° CIN" />
+      				<TableColumn fx:id="cheffield" minWidth="0.0" prefWidth="118.0" text="Nom du chef" />
+      				<TableColumn fx:id="typebox" prefWidth="70.0" text="Type" />
+      				<TableColumn fx:id="regionfield" text="Région" />
+      				<TableColumn fx:id="datepicker" prefWidth="87.0" text="DateD" />
+      				<TableColumn fx:id="debutdatefield" prefWidth="84.0" text="HeureD" />
+      				<TableColumn fx:id="datepicker1" minWidth="0.0" prefWidth="101.0" text="DateF" />
+      				<TableColumn fx:id="findatefield" minWidth="9.60003662109375" prefWidth="123.0" text="HeureF" />
+      				<TableColumn fx:id="choiceboxbesoin1" maxWidth="3000.0" minWidth="12.0" prefWidth="137.0" text="Besoin matériels" />
+      				<TableColumn fx:id="choiceboxbesoin21" prefWidth="172.0" text="Besoin Véhicules" />
+      				<TableColumn fx:id="budgetfield" minWidth="20.0" prefWidth="96.0" text="Budget" />
+      				<TableColumn fx:id="ID" maxWidth="3000.0" minWidth="12.0" prefWidth="123.0" text="ID" />
+      			</columns>
+               <stylesheets>
+                  <URL value="@../../Stylesheet/Table.css" />
+                  <URL value="@../../stylesheetmat/styles.css" />
+               </stylesheets>
+      		</TableView>
+      		<Button fx:id="return1" layoutX="716.0" layoutY="676.0" mnemonicParsing="false" onAction="#Retour" prefHeight="31.0" prefWidth="141.0" style="-fx-background-color: #9999ff;" styleClass="bouton" stylesheets="@../../Stylesheet/Table.css" text="Retour" textFill="WHITE">
+      			<font>
+      				<Font name="System Bold" size="15.0" />
+      			</font>
+      		</Button>
+      		<Button fx:id="supp" layoutX="477.0" layoutY="675.0" mnemonicParsing="false" onAction="#Delete" prefHeight="31.0" prefWidth="141.0" style="-fx-background-color: #9A0D1C;" styleClass="bouton" stylesheets="@../../Stylesheet/Table.css" text="Supprimer" textFill="WHITE">
+      			<font>
+      				<Font name="System Bold" size="15.0" />
+      			</font>
+      		</Button>
+      		<ImageView fx:id="ret" fitHeight="22.0" fitWidth="38.0" layoutX="880.0" layoutY="681.0" pickOnBounds="true" preserveRatio="true">
+      			<image>
+      				<Image url="@../New/return_24px.png" />
+      			</image>
+      		</ImageView>
+      		<ImageView fx:id="delete" fitHeight="22.0" fitWidth="22.0" layoutX="426.0" layoutY="680.0" pickOnBounds="true" preserveRatio="true">
+      			<image>
+      				<Image url="@../New/multiply_26px.png" />
+      			</image>
+      		</ImageView>
+      		<TextField fx:id="recherche" layoutX="1111.0" layoutY="73.0" onAction="#searchTravaux" promptText="Recherche" />
+      		<ImageView fx:id="search" fitHeight="22.0" fitWidth="37.0" layoutX="1070.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
+      			<image>
+      				<Image url="@../New/search_26px.png" />
+      			</image>
+      		</ImageView>
+            <AnchorPane layoutX="-3.0" prefHeight="49.0" prefWidth="1389.0" style="-fx-background-color: #000d1a;">
+               <children>
+                  <ImageView fitHeight="22.0" fitWidth="31.0" layoutX="1219.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../New/minimize_window_48px.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="22.0" fitWidth="31.0" layoutX="1289.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../New/close_window_48px.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="22.0" fitWidth="31.0" layoutX="1256.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../New/maximize_window_50px.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="47.0" fitWidth="39.0" layoutX="23.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../New/langfr-800px-Coat_of_arms_of_Tunisia.svg.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="63.0" layoutY="14.0" prefHeight="21.0" prefWidth="120.0" text="Municipalité">
+                     <font>
+                        <Font name="Calibri Bold Italic" size="20.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="0.23300970873786409" endY="1.0">
+                           <stops>
+                              <Stop color="BLACK" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <Label layoutX="547.0" layoutY="62.0" minHeight="47.0" prefHeight="47.0" prefWidth="265.0" text="Liste des travaux" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Label>
+      	</children>
+      </AnchorPane>
+   </center>
+</BorderPane>
